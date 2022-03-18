@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding a map to yor website or web application using Mapbox</title>
+
+    <!-- Styles -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 style="text-align: center;">Map with Mapbox</h1>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <div id='map' style='width: 400px; height: 300px; margin: 0 auto;'></div>
+    </main>
+
+    <!-- Scripts -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibmFzaW0yOCIsImEiOiJjbDB3aDloZGQxZWFjM2NycHh2dWlsemtwIn0.BuncPEERb0SZv8n7VJMVSg';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v11',
+            center: [28.112268, -25.270760], // [Longitude, Latitude]
+            zoom: 5 // Initial zoom
+        });
+    </script>
+</body>
+</html>
