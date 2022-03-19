@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" value="text" id="hello" />
+    <script type="application/javascript;version=1.7"></script>
+    <script>
+        let global_var = "abc";
+
+        function loadpages() {
+            var local_var = "xyz";
+             global_var = local_var;
+            console.log(global_var); // "xyz"
+        }
+         loadpages()
+        function show_global_var_value() {
+            console.log(global_var); // "abc"
+        }
+        show_global_var_value()
+    </script>
+</body>
+
+</html>
